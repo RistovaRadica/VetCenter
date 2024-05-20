@@ -1,0 +1,356 @@
+/* Global Styles */
+:root {
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+}
+.all-content{
+    background: #f7f5f2;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: lightblue;
+    border-radius: 10px;
+}
+html::-webkit-scrollbar{
+    width: 10px;
+}
+
+/* Navbar Styles */
+#navbar {
+    background-color: #c6bbb3;
+    display: flex !important;
+    justify-content: space-between;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+#logo img{
+    border-radius: 10px;
+    width: 160px;
+    margin-left: 40px;
+
+    /*3 lines start*/
+}.navbar-toggler {
+     border: none;
+     background-color: transparent;
+ }
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    font-size: 24px;
+    color: black;
+}
+
+.navbar-collapse {
+    display: none;
+}
+
+.navbar-collapse.show {
+    display: block;
+}
+/*3 lines end*/
+.navbar-nav {
+    flex-direction: column;
+    margin-left: 190px;
+}
+
+.navbar-nav .nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-item .nav-link {
+    color: black;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.nav-item .nav-link:hover {
+    background: #f7f5f2;
+    border-radius: 5px;
+    color: black;
+}
+
+.navbar form button {
+    background: black;
+    color: white;
+    border: 1px solid white;
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+}
+
+/* Home Section */
+#home {
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 88%;
+    font-family: 'Roboto', sans-serif;
+}
+.content{
+    padding-top: 210px;
+    margin-left: 56px;
+}
+.content h3{
+    font-size: 50px;
+    color: black;
+}
+.content p{
+    margin-top: 10px;
+    color: black;
+}
+
+.content a{
+    padding: 10px;
+    background: white;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.content a:hover {
+    background: #c6bbb3;
+    color: white;
+}
+
+/* About Section */
+#about {
+    width: 100%;
+    height: 100vh;
+    background: #f7f5f2;
+    font-family: 'Roboto', sans-serif;
+}
+
+#about .container {
+    padding-top: 70px;
+}
+/*
+#about .row {
+    display: flex;
+    align-items: center;
+}
+
+#about .col-md-6 {
+    flex: 1;
+    padding: 0 20px;
+}
+*/
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.heading span {
+    color: #c6bbb3;
+}
+#about .card{
+    border-radius: 10px;
+}
+#about .card img {
+    border-radius: 10px;
+}
+@media screen and (max-width:982px){
+    #about p{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width:766px){
+    #about p{
+        font-size: 15px;
+    }
+    #about{
+        height: 120vh;
+    }
+}
+/* Team Section */
+/* Team Section */
+#team {
+    width: 100%;
+    background: #f7f5f2;
+    padding: 60px 0; /* Add padding to prevent overlap */
+    font-family: 'Roboto', sans-serif;
+}
+
+.heading2 {
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#team .container {
+    margin-top: 30px;
+}
+
+#team .card {
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#team .card img {
+    border-radius: 10px;
+    width: 100%; /* Ensure images take the full width of the card */
+}
+
+#team .card p {
+    text-align: center;
+    padding-top: 10px;
+    color: black;
+}
+
+#team:hover {
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 767px) {
+    #team {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 20px 0; /* Reduce padding for smaller screens */
+    }
+
+    #team .container {
+        display: block;
+    }
+}
+
+/* Reviews Section */
+.reviews {
+    background-color: #f7f5f2;
+    font-family: 'Roboto', sans-serif;
+    padding: 60px 0; /* Add padding to prevent overlap */
+}
+
+.heading3 {
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.reviews .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted min-width */
+    gap: 2rem;
+}
+
+.reviews .box-container .box {
+    background: #fff;
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
+
+.reviews .box-container .box img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.reviews .box-container .box p {
+    padding: 2rem 0;
+    line-height: 2;
+    font-size: 1.5rem;
+    color: darkgray;
+}
+
+.reviews .box-container .box .stars {
+    padding: .5rem 1.5rem;
+    border-radius: .5rem;
+    background-color: lightgray;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.reviews .box-container .box .stars i {
+    font-size: 1.5rem;
+    color: royalblue;
+}
+
+#reviews:hover {
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 767px) {
+    .reviews {
+        padding: 20px 0; /* Reduce padding for smaller screens */
+    }
+}
+
+/*start contact*/
+.contact{
+    background: #f9f9f9;
+    padding: 50px;
+}
+.contact form{
+    border-radius: .5rem;
+    background-color: lightgray;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 50rem;
+}
+/*
+.contact form .message{
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    background-color: blue;
+    padding: 1.5rem 1rem;
+    font-size: 1.7rem;
+    color: white;
+    text-align: center;
+}*/
+.contact .submit{
+    width: 160px;
+    font-size: 16px;
+    font-weight: 550;
+    background: white;
+    color: black;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.contact .submit:hover{
+    width: 170px;
+}
+
+.contact form .box{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.7rem;
+    color: black;
+    text-transform: none;
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.contact form span {
+    font-size: 1.5rem;
+    color: black;
+
+}

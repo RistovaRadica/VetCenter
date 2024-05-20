@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Vetcenter</title>
+    <link rel="stylesheet" href="Style.css">
+    <!--this is bootstap links-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- this is fonts links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- this is icons link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+
+</head>
+<body>
+<div class="all-content">
+    <!--navbar start-->
+
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="logo"><img src="images/logo.png" alt="" > </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fas fa-bars navbar-toggler-icon"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--navbar end-->
+
+
+
+    <!--home section start -->
+    <section id="home">
+        <div class="content">
+            <h3>Welcome to Animal Care Center</h3>
+            <p>Discover Exceptional Care for Your Furry Friends at Animal Care Center<br> Where Every Wag and Purr Matters!</p>
+            <a href="#contact">Make Appointment</a>
+        </div>
+    </section>
+    <!--home section end -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const success = params.get('success');
+            const error = params.get('error');
+            const messageDiv = document.getElementById('message');
+
+            if (success) {
+                messageDiv.innerHTML = '<p style="color: green;">Appointment successfully created!</p>';
+            } else if (error) {
+                messageDiv.innerHTML = '<p style="color: red;">There was an error creating the appointment.</p>';
+            }
+        });
+    </script>
+
+    <!-- about section start-->
+    <section id="about">
+        <div class="container"></div>
+        <div class="heading">About <span>Us</span></div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="images/aboutUS.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Who Are We? </h3>
+                <p>Looking for a veterinary clinic that treats your pets like family?<br> Welcome to Animal Care Center. <br>Founded 2023,
+                    we're dedicated to providing compassionate care for pets in Macedonia.<br>
+                    Our experienced team is here to ensure your furry friends receive the best possible treatment,
+                    from routine check-ups to emergency care. Trust us to keep your pets healthy and happy.
+                </p>
+
+            </div>
+        </div>
+    </section>
+    <!--about section end -->
+
+
+    <section id="team">
+        <div class="heading2">Team</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <img src="images/DR2.jpg" alt="">
+                        <p>Specialist Lorren <br>in Veterinary Medicine </p>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <img src="images/DR1.png" alt="">
+                        <p>Master of Science <br>Alis <br>in Veterinary Medicine </p>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <img src="images/DR3.jpg" alt="">
+                        <p>Doctor John <br>in Veterinary Medicine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <div class="reviews" id="reviews">
+        <h4 class="heading3">Reviews</h4>
+        <div class="box-container container">
+            <div class="box">
+                <img src="images/img1.jpg" alt="" height="230">
+                <p>Great experience, I recommend!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h4>Mary Grey</h4>
+            </div>
+            <div class="box">
+                <img src="images/img2.jpg" alt="" height="230">
+                <p>The doctors who work are excellent and very caring!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h4>Teo Mays</h4>
+            </div>
+            <div class="box">
+                <img src="images/img3.jpg" alt="" height="230">
+                <p>The best!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h4>Ana Pall</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- reviews end-->
+
+
+    <!-- conact section starts-->
+    <<!-- contact section starts-->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h1 class="heading">Make appointment</h1>
+            <div class="row">
+                <form action="submit.php" method="post">
+                    <span>Your name :</span>
+                    <input type="text" name="name" placeholder="enter your name" class="box" required>
+                    <span>Your email :</span>
+                    <input type="email" name="email" placeholder="enter your email" class="box" required>
+                    <span>Your number :</span>
+                    <input type="number" name="number" placeholder="enter your number" class="box" required>
+                    <span>Appointment date :</span>
+                    <input type="datetime-local" name="date" class="box" required>
+                    <input type="submit" value="Make Appointment" class="submit">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- contact section end -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
